@@ -7,10 +7,7 @@
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
       <a-marker preset='custom' type='pattern' url='res/pattern-qr-code.patt'>
         <a-entity text="width: 5; value:122211" position='1.4 1.8 0'></a-entity>                   <!--加上文字-->
-		  <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
-	  <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-              <a-sphere position="5 0 0" color="mediumseagreen"></a-sphere>
-          </a-entity>
+		  <a-box position='0 0.5 0' material='color: yellow;'></a-box>
         <!--<a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 0.5 0' scale='0.2 0.2 0.2'></a-entity> 加上3D模型-->
       </a-marker>
       <a-entity camera></a-entity>
