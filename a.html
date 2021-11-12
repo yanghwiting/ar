@@ -24,8 +24,7 @@
      embedded
      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">  
 	  
-      <a-marker preset='custom' type='pattern' url='ares/pattern-qr-code.patt'>
-        <a-entity text="width: 5; value:test" position='1.4 1.8 0'></a-entity>                   <!--加上文字-->
+      <a-marker markerhandler preset='custom' type='pattern' url='ares/pattern-qr-code.patt'>
 		   <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
            <a-entity id='gltf' gltf-model="url(ares/scene.gltf)" position="0 0.1 0" scale="0.15 0.15 0.15" rotation="-45 0 0"></a-entity> <!--加上3D模型-->
       </a-marker>
