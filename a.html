@@ -40,7 +40,14 @@
            <a-entity id='gltf' gltf-model="url(res/scene.gltf)" fromspherical='0 0 0' ></a-entity> <!--加上3D模型-->
 
       </a-marker>
-      <a-entity camera></a-entity>
+      
+		
+      <a-entity position="1.75 0 1.2" rotation="0 28 0">
+        <a-camera position="0 0 0" near="0.1"></a-camera>
+      </a-entity>
+		
+		
+		
     </a-scene>
   </body>
 </html>
