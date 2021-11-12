@@ -1,7 +1,8 @@
 <!--index.html-->
 <!doctype HTML>
 <html>
-
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 	
    <script>
      AFRAME.registerComponent('fromspherical', {
@@ -39,14 +40,7 @@
            <a-entity id='gltf' gltf-model="url(res/scene.gltf)" fromspherical='0 0 0' ></a-entity> <!--加上3D模型-->
 
       </a-marker>
-      
-		
-      <a-entity position="1.75 0 1.2" rotation="0 28 0">
-        <a-camera position="0 0 0" near="0.1"></a-camera>
-      </a-entity>
-		
-		
-		
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
