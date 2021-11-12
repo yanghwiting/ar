@@ -5,21 +5,11 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-      <a-marker preset='custom' type='pattern' url='res/pattern-qr-code.patt'>
-		  
-          <a-asset-item id="triceratops" src="url(ares/scene.gltf)" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
-
-          <a-asset-item id="reticle" src="https://cdn.aframe.io/examples/ar/models/reticle/reticle.gltf" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
-
-          <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
-           <a-asset-item id="messageText" src="message.html"></a-asset-item>
-		  
-
+      <a-marker preset='custom' type='pattern' url='ares/pattern-qr-code.patt'>
 		   <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
-           <!--<a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 0.5 0' scale='0.2 0.2 0.2'></a-entity> 加上3D模型-->
+           <a-entity id='gltf' gltf-model="url(ares/scene.gltf)" position='0 0.5 0' scale='0.2 0.2 0.2'></a-entity> <!--加上3D模型-->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
