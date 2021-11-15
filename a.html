@@ -1,8 +1,8 @@
-<!--index.html-->
-<!doctype HTML>
+<!DOCTYPE html>
+
 <html>
   <head>
-    <title>AR.js</title>
+    <title>Gesture Interactions - A-Frame & AR.js</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
@@ -12,26 +12,8 @@
     <script src="gesture-detector.js"></script>
     <script src="gesture-handler.js"></script>
   </head>
-	
-  <script>
-    window.onload = function () {
-      document
-        .querySelector(".say-hi-button")
-        .addEventListener("click", function () {
-          // here you can change also a-scene or a-entity properties, like
-          // changing your 3D model source, size, position and so on
-          // or you can just open links, trigger actions...
-          alert("Hi there!");
-        });
-    };
-	  
 
-	  
-  </script>
-
-	
-  <body style='margin : 0px; overflow: hidden;'>
-
+  <body>
     <a-scene
       arjs
       embedded
@@ -40,13 +22,30 @@
       gesture-detector
       id="scene"
     >
-		
-    </a-scene>
-	  
-     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-      <a-marker markerhandler preset='custom' type='pattern' url='ares/pattern-qr-code.patt'>
-		   <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
-           <a-entity id='gltf' gltf-model="url(res/scene.gltf)" position='0 0.5 0' scale='0.15 0.15 0.15'></a-entity> <!--加上3D模型-->
+      <a-assets>
+        <a-asset-item
+          id="bowser"
+          src="res/scene.gltf"
+        >
+        </a-asset-item>
+      </a-assets>
+
+      <a-marker
+        preset="hiro"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-entity
+          id="bowser-model"
+          gltf-model="#bowser"
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          class="clickable"
+          gesture-handler
+        >
+        </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
